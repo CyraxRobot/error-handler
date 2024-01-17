@@ -55,7 +55,7 @@ throw new AuthorizationFailedError();
 `./src/initialized-error-handler.ts`
 ```ts
 // There are common errors in the lib, but you can use your own errors
-import { CustomError } from '@CyraxRobot/error-handler';
+import { CustomError } from '@cyraxrobot/error-handler';
 
 // at first we create instance of ErrorHandler;
 export const errorHandler = new ErrorHandler();
@@ -106,7 +106,7 @@ export class SomeError extends Error implements RegisterableError {
 ```ts
 
 // here is example how you can wrap SyntaxError
-import { HttpErrorResponse, ErrorLevel, RethrownError } from '@CyraxRobot/error-handler';
+import { HttpErrorResponse, ErrorLevel, RethrownError } from '@cyraxrobot/error-handler';
 
 export class InvalidJsonError extends RethrownError {
   public level = 'warn' as ErrorLevel;
@@ -182,7 +182,7 @@ const response = errorHandler.errorToHttpResponse(new Error('something'));
 1. At first create file under root dir and call it `initialized-error-handler.ts`
 2. Then initialize it with default errors from the package
 ```ts
-import { ErrorHandler, CustomError, HttpError } from '@CyraxRobot/error-handler';
+import { ErrorHandler, CustomError, HttpError } from '@cyraxrobot/error-handler';
 import AuthorizationError from './errors/authorization-error';
 
 const errorHandler = new ErrorHandler();
